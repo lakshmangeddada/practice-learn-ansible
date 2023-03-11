@@ -34,5 +34,5 @@
   tasks:
     - name: print variables from inventory
       ansible.builtin.debug:
-        msg: URL = {{ url }}
+        msg: ansible_user = {{ ansible_user }}
 
