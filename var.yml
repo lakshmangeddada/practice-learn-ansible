@@ -1,3 +1,4 @@
+#variables from play
 - name: play variables
   hosts: localhost
   vars:
@@ -7,12 +8,22 @@
       ansible.builtin.debug:
         msg: URL = {{ url }}
 
+#variables from files
 - name: play variables from files
   hosts: localhost
   vars_files:
     - vars.yml
   tasks:
     - name: print variables from files
+      ansible.builtin.debug:
+        msg: URL = {{ url }}
+
+#variables from tasks
+- name: play variables from tasks
+  hosts: localhost
+  tasks:
+    - name: print variables from tasks
+      url: tasks.example.com
       ansible.builtin.debug:
         msg: URL = {{ url }}
 
