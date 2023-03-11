@@ -1,5 +1,5 @@
 - name: play variables
-  hosts: all
+  hosts: localhost
   vars:
     url: play.example.com
   tasks:
@@ -8,7 +8,7 @@
         msg: URL = {{ url }}
 
 - name: play variables from files
-  hosts: all
+  hosts: localhost
   vars_files:
     - vars.yml
   tasks:
