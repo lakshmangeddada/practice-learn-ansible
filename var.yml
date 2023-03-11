@@ -23,8 +23,16 @@
   hosts: localhost
   tasks:
     - name: print variables from tasks
-      vars:
+      vars: ##This variable works on this tasks only, tasks from same play cannot access this variable
         url: tasks.example.com
+      ansible.builtin.debug:
+        msg: URL = {{ url }}
+
+#variables from inventory
+- name: play variables from inventory
+  hosts: localhost
+  tasks:
+    - name: print variables from inventory
       ansible.builtin.debug:
         msg: URL = {{ url }}
 
