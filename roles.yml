@@ -1,7 +1,4 @@
 - name: print url
   host: localhost
-  tasks:
-    - name: print role
-      ansible.builtin.debug:
-        msg:
-          - demo
+  roles:
+    - demo
