@@ -1,4 +1,4 @@
-- name: print url
+- name: role level variables
   host: localhost
   roles:
     - demo
