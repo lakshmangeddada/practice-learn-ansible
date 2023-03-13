@@ -35,3 +35,6 @@
     - name: print variables from inventory
       ansible.builtin.debug:
         msg: ansible_user = {{ ansible_user }}, ansible_password = {{ ansible_password }}
+
+
+#variables from cli
